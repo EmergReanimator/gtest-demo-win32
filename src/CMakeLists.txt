@@ -3,8 +3,10 @@ add_library(example)
 target_sources(example
   PRIVATE
     example.cpp
+    example_c.c
   PUBLIC
     example.h
+    example_c.h
   )
 
 target_include_directories(example
