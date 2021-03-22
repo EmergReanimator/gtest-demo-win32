@@ -32,34 +32,45 @@ Either using `ctest`:
 $ cd build
 $ ctest
 
-Running tests...
-Test project /home/user/gtest-demo/build
-    Start 1: unit
-1/1 Test #1: unit .............................   Passed    0.00 sec
+Test project google-test-toehold/build
+    Start 1: example.add
+1/4 Test #1: example.add ......................   Passed    0.03 sec
+    Start 2: example.c_add
+2/4 Test #2: example.c_add ....................   Passed    0.01 sec
+    Start 3: example.subtract
+3/4 Test #3: example.subtract .................   Passed    0.02 sec
+    Start 4: example.c_subtract
+4/4 Test #4: example.c_subtract ...............   Passed    0.01 sec
 
-100% tests passed, 0 tests failed out of 1
+100% tests passed, 0 tests failed out of 4
 
-Total Test time (real) =   0.00 sec
+Label Time Summary:
+unit    =   0.07 sec*proc (4 tests)
+
+Total Test time (real) =   0.14 sec
 ```
 
 Or directly using `unit_tests`:
 ```
 $ cd build 
-$ ./bin/unit_tests
+$ ./bin/Debug/unit_tests.exe
 
-[==========] Running 2 tests from 1 test case.
+[==========] Running 4 tests from 1 test suite.
 [----------] Global test environment set-up.
-[----------] 2 tests from example
+[----------] 4 tests from example
 [ RUN      ] example.add
 [       OK ] example.add (0 ms)
+[ RUN      ] example.c_add
+[       OK ] example.c_add (0 ms)
 [ RUN      ] example.subtract
 [       OK ] example.subtract (0 ms)
-[----------] 2 tests from example (1 ms total)
+[ RUN      ] example.c_subtract
+[       OK ] example.c_subtract (0 ms)
+[----------] 4 tests from example (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 2 tests from 1 test case ran. (1 ms total)
-[  PASSED  ] 2 tests.
-
+[==========] 4 tests from 1 test suite ran. (1 ms total)
+[  PASSED  ] 4 tests.
 ```
 
 
